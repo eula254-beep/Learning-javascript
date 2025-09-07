@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Methods Example</title>
+</head>
+<body>
+  <h2>DOM Methods in JavaScript</h2>
+
+  <!-- Elements in HTML -->
+  <div id="main">Hello</div>
+  <p class="note">Note 1</p>
+  <p class="note">Note 2</p>
+
+  <script>
+    // 1. getElementById
+    let el = document.getElementById("main");
+    el.textContent = "Changed here"; 
+    // Selects the <div> with id="main" and changes its text
+
+    // 2. getElementsByClassName
+    let notes = document.getElementsByClassName("note");
+    notes[0].style.color = "blue"; 
+    // Selects all elements with class="note"
+    // Changes the first one (Note 1) text color to blue
+
+    // 3. getElementsByTagName
+    let allPs = document.getElementsByTagName("p");
+    allPs[1].style.fontWeight = "bold"; 
+    // Selects all <p> elements
+    // Makes the second <p> (Note 2) bold
+
+    // 4. querySelector
+    document.querySelector(".note").innerText = "First note - styled"; 
+    // Selects the FIRST element with class="note"
+    // Changes its text content
+
+    // 5. querySelectorAll
+    document.querySelectorAll("p").forEach(p => p.style.fontSize = "18px"); 
+    // Selects ALL <p> elements
+    // Loops through each and changes the font size
+  </script>
+</body>
+</html>

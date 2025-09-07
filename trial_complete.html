@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML & JavaScript Example</title>
+</head>
+<body>
+  <h2>Greeting Example</h2>
+
+  <!-- (1) Input element where user types -->
+  <!-- type="text" → creates a text box -->
+  <!-- id="nameInput" → unique name so JavaScript can find it -->
+  <!-- placeholder → hint text inside the box -->
+  <input type="text" id="nameInput" placeholder="Type your name">
+
+  <!-- (2) Paragraph where the greeting will appear -->
+  <p id="greeting"></p>
+
+  <!-- (3) JavaScript part starts here -->
+  <script>
+    // Step 1: Get the input element by its ID and store it in a variable
+    let input = document.getElementById("nameInput");
+
+    // Step 2: Add an event listener → listens for typing ("input" event)
+    input.addEventListener("input", function () {
+      
+      // Step 3: Find the paragraph with id="greeting"
+      // Step 4: Change its text to "Hello, " + whatever the user typed
+      document.getElementById("greeting").textContent =
+        "Hello, " + input.value;
+    });
+  </script>
+</body>
+</html>

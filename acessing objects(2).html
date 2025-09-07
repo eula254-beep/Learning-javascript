@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bracket Notation Example</title>
+</head>
+<body>
+  <h2>Bracket Notation Example</h2>
+  <p id="output"></p>
+
+  <script>
+    // Creating an object
+    let student = {
+      name: "John",
+      age: 20,
+      course: "Computer Studies"
+    };
+
+    // Accessing object items using bracket notation
+    let nameValue = student["name"];   // "John"
+    let ageValue = student["age"];     // 20
+    let courseValue = student["course"]; // "Computer Studies"
+
+    // Showing result in console
+    console.log(nameValue);
+    console.log(ageValue);
+    console.log(courseValue);
+
+    // Also displaying on the web page
+    document.getElementById("output").innerHTML =
+      "Name: " + nameValue + "<br>" +
+      "Age: " + ageValue + "<br>" +
+      "Course: " + courseValue;
+  </script>
+</body>
+</html>

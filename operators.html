@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equal Signs in JavaScript</title>
+</head>
+<body>
+  <h2>Equal Signs in JavaScript</h2>
+  <pre id="output"></pre>
+
+  <script>
+    let result = "";
+
+    // 1. = (Assignment Operator)
+    let x = 10;    // assigns 10 to x
+    result += "Using = (assignment): x = " + x + "\n";
+
+    // 2. == (Loose Equality - checks values only)
+    let num = 5;
+    let str = "5";
+    result += "Using == (loose equality): 5 == '5' → " + (num == str) + "\n";
+
+    // 3. === (Strict Equality - checks values + types)
+    result += "Using === (strict equality): 5 === '5' → " + (num === str) + "\n";
+
+    // 4. !== (Strict Inequality - checks values + types)
+    result += "Using !== : 5 !== '5' → " + (num !== str) + "\n";
+
+    // 5. != (Loose Inequality - checks values only)
+    result += "Using != : 5 != '5' → " + (num != str) + "\n";
+
+    // Display result on page
+    document.getElementById("output").textContent = result;
+  </script>
+</body>
+</html>

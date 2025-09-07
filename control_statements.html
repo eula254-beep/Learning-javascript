@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Control Statements Example</title>
+</head>
+<body>
+  <h2>JavaScript Control Statements</h2>
+  <pre id="output"></pre>
+
+  <script>
+    let result = "";
+
+    // 1. if...else
+    let age = 18;
+    if (age >= 18) {
+      result += "You are an adult.\n";
+    } else {
+      result += "You are a minor.\n";
+    }
+
+    // 2. if...else if...else
+    let marks = 75;
+    if (marks >= 80) {
+      result += "Grade: A\n";
+    } else if (marks >= 60) {
+      result += "Grade: B\n";
+    } else if (marks >= 40) {
+      result += "Grade: C\n";
+    } else {
+      result += "Grade: Fail\n";
+    }
+
+    // 3. for loop
+    result += "Counting with for loop: ";
+    for (let i = 1; i <= 5; i++) {
+      result += i + " ";
+    }
+    result += "\n";
+
+    // 4. while loop
+    result += "Counting with while loop: ";
+    let x = 1;
+    while (x <= 5) {
+      result += x + " ";
+      x++;
+    }
+    result += "\n";
+
+    // 5. do...while loop
+    result += "Counting with do...while loop: ";
+    let y = 1;
+    do {
+      result += y + " ";
+      y++;
+    } while (y <= 5);
+    result += "\n";
+
+    // Display results on webpage
+    document.getElementById("output").textContent = result;
+  </script>
+</body>
+</html>
