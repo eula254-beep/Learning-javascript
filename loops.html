@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Increment and Decrement in Loops</title>
+</head>
+<body>
+  <h2>3. Increment and Decrement in Loops</h2>
+  <pre id="loops"></pre>
+
+<script>
+  let output = "";
+
+  // For loop (increment)
+  for (let i = 0; i < 3; i++) {
+    output += "for loop increment i = " + i + "\n";
+  }
+
+  // While loop (decrement)
+  let j = 3;
+  while (j > 0) {
+    output += "while loop decrement j = " + j + "\n";
+    j--; // decrementing
+  }
+
+  // For..of loop
+  let nums = [10, 20, 30];
+  for (let n of nums) {
+    output += "for..of value = " + n + "\n";
+  }
+
+  // forEach loop
+  nums.forEach((value, index) => {
+    output += "forEach index = " + index + " value = " + value + "\n";
+  });
+
+  // Show the list on the webpage
+  document.getElementById("loops").textContent = output;
+</script>
+
+</body>
+</html>

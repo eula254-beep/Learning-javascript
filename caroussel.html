@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>African Art Carousel</title>
+</head>
+<body>
+  <h2>My Picture Carousel</h2>
+
+  <img id="carousel" src="img 1.jpg" width="400" alt="carousel image">
+  <br>
+  <button onclick="prev()">Prev</button>
+  <button onclick="next()">Next</button>
+
+<script>
+  let images = ["img 1.jpg", "img 2.jpg", "img 3.jpg"];
+  let index = 0;
+
+  function showImage() {
+    document.getElementById("carousel").src = images[index];
+  }
+
+  function next() {
+    index = (index + 1) % images.length;
+    showImage();
+  }
+
+  function prev() {
+    index = (index - 1 + images.length) % images.length;
+    showImage();
+  }
+</script>
+
+</body>
+</html>

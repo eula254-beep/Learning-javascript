@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #56ccf2, #2f80ed);
+      color: white;
+      text-align: center;
+      padding: 30px;
+    }
+    .weather-box {
+      background: rgba(0,0,0,0.3);
+      padding: 20px;
+      border-radius: 15px;
+      width: 1000px;
+      margin: auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+    h2 {
+      margin-bottom: 50 px;
+    }
+    .temp {
+      font-size: 2em;
+      font-weight: bold;
+    }
+    .condition {
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <h2>Weather in Nairobi</h2>
+  <div class="weather-box">
+    <p class="temp" id="temp">-- °C</p>
+    <p class="condition" id="condition">Cheaking the sky.....</p>
+    <p id="humidity"></p>
+  </div>
+
+<script>
+  fetch("https://wttr.in/Nairobi?format=j1")
+    .then(res => res.json())
+    .then(data => {
+      let current = data.current_condition[0];
+      document.getElementById("temp").textContent = current.temp_C + "°C";
+      document.getElementById("condition").textContent = current.weatherDesc[0].value;
+      document.getElementById("humidity").textContent = "Humidity: " + current.humidity + "%";
+    })
+    .catch(err => console.error("Error:", err));
+</script>
+</body>
+</html>

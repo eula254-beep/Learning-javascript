@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Function vs Method</title>
+</head>
+<body>
+  <h2>Function vs Method</h2>
+
+<script>
+  // Function
+  function greet(name) {
+    return "Hello " + name;
+  }
+
+  // Method inside an object
+  let person = {
+    name: "Shalet Eula",
+    sayHello: function() {
+      return "Hello, I am " + this.name;
+    }
+  };
+
+  console.log(greet("Trainee"));       // Function output
+  console.log(person.sayHello());      // Method output
+</script>
+
+</body>
+</html>

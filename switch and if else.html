@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Switch vs If/Else</title>
+</head>
+<body>
+  <h2>Switch vs If/Else Example</h2>
+
+<script>
+  let grade = "B";
+  let age = 20;
+
+  // Switch
+  switch (grade) {
+    case "A": 
+      console.log("Grade: Excellent");
+      break;
+    case "B": 
+      console.log("Grade: Good");
+      break;
+    case "C": 
+      console.log("Grade: Fair");
+      break;
+    default: 
+      console.log("Grade: Fail");
+  }
+
+  // If/Else
+  if (age < 13) {
+    console.log("Age: Child");
+  } else if (age < 20) {
+    console.log("Age: Teenager");
+  } else {
+    console.log("Age: Adult");
+  }
+</script>
+
+</body>
+</html>
